@@ -69,6 +69,8 @@
 
 #include "CDIBFlood.h"
 
+#include "JpgToBmp.h"  //By HJH201707
+
 #define PI 3.14159265358979323846
 
 struct SurfacePt
@@ -331,8 +333,34 @@ BOOL CMy3dViewerDoc::OnOpenDocument(LPCTSTR lpszPathName)
 			this->SetPathName(lpszPathName);
 		}
 		CMainFrame* pMainFrame	= (CMainFrame*)AfxGetMainWnd( );
+	}
+	// if choosed file is '.jpg/jpeg'   By HJH201707
+	else if (cStr.GetAt(namelen - 1) == 'g') {
+		//convert to bmp  By HJH201707
+		CJpgToBmp	m_jpgToBmp;
+		int iRet = 0;
+		iRet = m_jpgToBmp.LoadJpegFile((LPSTR)lpszPathName, "tmp.bmp");//(char *JpegFileName, char *BmpFileName)
+
+
+		HANDLE hDib;
+		hDib = m_CDIB.OpenDIB("tmp.bmp");
+
+		int w, h;
+		HANDLE hDib0 = m_CDIB.CopyDib(hDib);
+		HANDLE hRaw = m_CDIB.Dib2BWRaw8(hDib0, &w, &h);//hDib0 is freed in this call
+
+		if (hDib != NULL)
+		{
+			m_CBmpViewerData->SetNewPosition();
+			m_CBmpViewerData->SetDIBHandle(hDib);
+			//m_CDIBOrg.FreeDib();
+			this->UpdateView();
+			this->SetPathName(lpszPathName);
+		}
+		CMainFrame* pMainFrame = (CMainFrame*)AfxGetMainWnd();
+	}
 	// if choosed file is '.ply'
-	}else if(cStr.GetAt(namelen-3)=='p'){
+		else if(cStr.GetAt(namelen-3)=='p'){
 		if(m_pMesh[m_nCurrentMeshIndex] != NULL){
 			delete m_pMesh[m_nCurrentMeshIndex];
 			m_pMesh[m_nCurrentMeshIndex] = NULL;
