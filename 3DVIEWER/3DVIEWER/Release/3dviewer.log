@@ -1,1 +1,41 @@
-﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.Cpp.Platform.targets(55,5): error MSB8020: The build tools for Visual Studio 2010 (Platform Toolset = 'v100') cannot be found. To build using the v100 build tools, please install Visual Studio 2010 build tools.  Alternatively, you may upgrade to the current Visual Studio tools by selecting the Project menu or right-click the solution, and then selecting "Retarget solution".
+﻿  3dviewerDoc.cpp
+d:\pkuwork\3dviewer\3dviewer\ClassArr.h(65): warning C4995: “ConstructElements”: 名称被标记为 #pragma deprecated
+d:\pkuwork\3dviewer\3dviewer\ClassArr.h(66): warning C4995: “DestructElements”: 名称被标记为 #pragma deprecated
+d:\pkuwork\3dviewer\3dviewer\ClassArr.h(87): warning C4995: “DestructElements”: 名称被标记为 #pragma deprecated
+d:\pkuwork\3dviewer\3dviewer\ClassArr.h(105): warning C4995: “DestructElements”: 名称被标记为 #pragma deprecated
+d:\pkuwork\3dviewer\3dviewer\ClassArr.h(118): warning C4995: “ConstructElements”: 名称被标记为 #pragma deprecated
+d:\pkuwork\3dviewer\3dviewer\ClassArr.h(127): warning C4995: “ConstructElements”: 名称被标记为 #pragma deprecated
+d:\pkuwork\3dviewer\3dviewer\ClassArr.h(132): warning C4995: “DestructElements”: 名称被标记为 #pragma deprecated
+d:\pkuwork\3dviewer\3dviewer\ClassArr.h(164): warning C4995: “ConstructElements”: 名称被标记为 #pragma deprecated
+d:\pkuwork\3dviewer\3dviewer\ClassArr.h(245): warning C4995: “DestructElements”: 名称被标记为 #pragma deprecated
+d:\pkuwork\3dviewer\3dviewer\ClassArr.h(250): warning C4995: “ConstructElements”: 名称被标记为 #pragma deprecated
+d:\pkuwork\3dviewer\3dviewer\ClassArr.h(268): warning C4995: “DestructElements”: 名称被标记为 #pragma deprecated
+d:\pkuwork\3dviewer\3dviewer\ClassArr.h(290): warning C4995: “ConstructElements”: 名称被标记为 #pragma deprecated
+d:\pkuwork\3dviewer\3dviewer\ClassArr.h(300): warning C4995: “DestructElements”: 名称被标记为 #pragma deprecated
+3dviewerDoc.cpp(74): warning C4005: “PI”: 宏重定义
+  d:\pkuwork\3dviewer\3dviewer\JpgToBmp.h(9): note: 参见“PI”的前一个定义
+3dviewerDoc.cpp(963): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+3dviewerDoc.cpp(1171): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+3dviewerDoc.cpp(1176): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1193): note: 参见“fscanf”的声明
+3dviewerDoc.cpp(1181): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1193): note: 参见“fscanf”的声明
+3dviewerDoc.cpp(1187): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1193): note: 参见“fscanf”的声明
+3dviewerDoc.cpp(1261): warning C4018: “<”: 有符号/无符号不匹配
+3dviewerDoc.cpp(1238): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+3dviewerDoc.cpp(1250): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1193): note: 参见“fscanf”的声明
+3dviewerDoc.cpp(1254): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1193): note: 参见“fscanf”的声明
+3dviewerDoc.cpp(1271): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1193): note: 参见“fscanf”的声明
+  正在生成代码
+  2 of 3303 functions ( 0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  3dviewer.vcxproj -> D:\PKUwork\3DVIEWER\Release\3dviewer.exe
+  3dviewer.vcxproj -> D:\PKUwork\3DVIEWER\Release\3dviewer.pdb (Full PDB)
