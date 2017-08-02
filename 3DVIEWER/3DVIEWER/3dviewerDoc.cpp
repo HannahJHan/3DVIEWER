@@ -12,8 +12,6 @@
 
 
 
-
-
 // ATL 项目中进行定义，并允许与该项目共享文档代码。
 
 
@@ -339,9 +337,9 @@ BOOL CMy3dViewerDoc::OnOpenDocument(LPCTSTR lpszPathName)
 		//convert to bmp  By HJH201707
 		CJpgToBmp	m_jpgToBmp;
 		int iRet = 0;
-		iRet = m_jpgToBmp.LoadJpegFile((LPSTR)lpszPathName, "tmp.bmp");//(char *JpegFileName, char *BmpFileName)
+		iRet = m_jpgToBmp.LoadJpegFile((LPSTR)lpszPathName,"tmp.bmp");//(char *JpegFileName, char *BmpFileName)
 
-
+		
 		HANDLE hDib;
 		hDib = m_CDIB.OpenDIB("tmp.bmp");
 
@@ -360,7 +358,7 @@ BOOL CMy3dViewerDoc::OnOpenDocument(LPCTSTR lpszPathName)
 		CMainFrame* pMainFrame = (CMainFrame*)AfxGetMainWnd();
 	}
 	// if choosed file is '.ply'
-		else if(cStr.GetAt(namelen-3)=='p'){
+	else if(cStr.GetAt(namelen-3)=='p'){
 		if(m_pMesh[m_nCurrentMeshIndex] != NULL){
 			delete m_pMesh[m_nCurrentMeshIndex];
 			m_pMesh[m_nCurrentMeshIndex] = NULL;

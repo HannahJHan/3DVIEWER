@@ -1,7 +1,11 @@
-﻿
+﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3dviewer", "3dviewer\3dviewer.vcxproj", "{DDA2D889-213C-437D-8098-3DC5DD070CF2}"
+# Visual Studio 10
+VisualStudioVersion = 10.0.40219.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3dviewer", "3DVIEWER\3dviewer.vcxproj", "{DDA2D889-213C-437D-8098-3DC5DD070CF2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D1C1CBD6-6F6F-4712-B618-0CE809742C48}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

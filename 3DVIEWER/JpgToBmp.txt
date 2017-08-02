@@ -1,3 +1,6 @@
 1.添加了 JPEG.h,  JpgToBmp.h,  JpgToBmp.cpp三个文件
 2.在3dviewerDoc.cpp中 #include "JpgToBmp.h"
 3.修改函数CMy3dViewerDoc::OnOpenDocument(LPCTSTR lpszPathName)中打开jpg的部分，将jpg转换成bmp格式再处理
+
+
+修改了.sln 和 .vcxproj文件中的版本号
