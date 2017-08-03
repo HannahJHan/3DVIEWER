@@ -137,16 +137,19 @@ void CJpgToBmp::showerror(int funcret)
 	switch(funcret)
 	{
 	case FUNC_MEMORY_ERROR:
+		AfxMessageBox("Error alloc memory! ");
 		printf("Error alloc memory!\n");   
-		exit(1);
+	//	exit(1);
 		break;
 	case FUNC_FILE_ERROR:
+		AfxMessageBox("File not found! ");
 		printf("File not found!!\n");   
-		exit(1);
+	//	exit(1);
 		break;
 	case FUNC_FORMAT_ERROR:
+		AfxMessageBox("File format error! ");
 		printf("File format error!\n");   
-		exit(1);
+	//	exit(1);
 		break;
 	}
 }

@@ -340,24 +340,27 @@ BOOL CMy3dViewerDoc::OnOpenDocument(LPCTSTR lpszPathName)
 		CJpgToBmp	m_jpgToBmp;
 		int iRet = 0;
 		iRet = m_jpgToBmp.LoadJpegFile((LPSTR)lpszPathName, "tmp.bmp");//(char *JpegFileName, char *BmpFileName)
+	
+		if (iRet == 1) {
+			HANDLE hDib;
+			hDib = m_CDIB.OpenDIB("tmp.bmp");
 
+			int w, h;
+			HANDLE hDib0 = m_CDIB.CopyDib(hDib);
+			HANDLE hRaw = m_CDIB.Dib2BWRaw8(hDib0, &w, &h);//hDib0 is freed in this call
 
-		HANDLE hDib;
-		hDib = m_CDIB.OpenDIB("tmp.bmp");
-
-		int w, h;
-		HANDLE hDib0 = m_CDIB.CopyDib(hDib);
-		HANDLE hRaw = m_CDIB.Dib2BWRaw8(hDib0, &w, &h);//hDib0 is freed in this call
-
-		if (hDib != NULL)
-		{
-			m_CBmpViewerData->SetNewPosition();
-			m_CBmpViewerData->SetDIBHandle(hDib);
-			//m_CDIBOrg.FreeDib();
-			this->UpdateView();
-			this->SetPathName(lpszPathName);
+			if (hDib != NULL)
+			{
+				m_CBmpViewerData->SetNewPosition();
+				m_CBmpViewerData->SetDIBHandle(hDib);
+				//m_CDIBOrg.FreeDib();
+				this->UpdateView();
+				this->SetPathName(lpszPathName);
+			}
+			CMainFrame* pMainFrame = (CMainFrame*)AfxGetMainWnd();
 		}
-		CMainFrame* pMainFrame = (CMainFrame*)AfxGetMainWnd();
+		else
+			AfxMessageBox(" Open file failed! ");
 	}
 	// if choosed file is '.ply'
 		else if(cStr.GetAt(namelen-3)=='p'){
