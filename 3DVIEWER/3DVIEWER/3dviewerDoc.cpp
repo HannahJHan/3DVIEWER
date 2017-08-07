@@ -10,8 +10,10 @@
 #include "stdafx.h"
 // SHARED_HANDLERS 可以在实现预览、缩略图和搜索筛选器句柄的
 
-
-
+//C#工程类库，用于JpegTOBmp
+#using "../Release/ClassLibrary1.dll"  
+using namespace ClassLibrary1;
+using namespace System;
 
 
 // ATL 项目中进行定义，并允许与该项目共享文档代码。
@@ -337,11 +339,17 @@ BOOL CMy3dViewerDoc::OnOpenDocument(LPCTSTR lpszPathName)
 	// if choosed file is '.jpg/jpeg'   By HJH201707
 	else if (cStr.GetAt(namelen - 1) == 'g') {
 		//convert to bmp  By HJH201707
-		CJpgToBmp	m_jpgToBmp;
-		int iRet = 0;
-		iRet = m_jpgToBmp.LoadJpegFile((LPSTR)lpszPathName, "tmp.bmp");//(char *JpegFileName, char *BmpFileName)
+		//CJpgToBmp	m_jpgToBmp;
+		//int iRet = 0;
+		//iRet = m_jpgToBmp.LoadJpegFile((LPSTR)lpszPathName, "tmp.bmp");//(char *JpegFileName, char *BmpFileName)
 	
-		if (iRet == 1) {
+	Class1^ obj = gcnew Class1();
+
+	//将char*转换为System::String^
+	String^ str1 = System::Runtime::InteropServices::Marshal::PtrToStringAnsi((IntPtr)(LPSTR)lpszPathName);
+	obj->convert(str1);
+
+		//if (iRet == 1) {
 			HANDLE hDib;
 			hDib = m_CDIB.OpenDIB("tmp.bmp");
 
@@ -358,9 +366,9 @@ BOOL CMy3dViewerDoc::OnOpenDocument(LPCTSTR lpszPathName)
 				this->SetPathName(lpszPathName);
 			}
 			CMainFrame* pMainFrame = (CMainFrame*)AfxGetMainWnd();
-		}
-		else
-			AfxMessageBox(" Open file failed! ");
+		//}
+		//else
+			//AfxMessageBox(" Open file failed! ");
 	}
 	// if choosed file is '.ply'
 		else if(cStr.GetAt(namelen-3)=='p'){
