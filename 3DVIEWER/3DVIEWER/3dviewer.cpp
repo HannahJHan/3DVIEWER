@@ -14,7 +14,7 @@
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
-using namespace System;
+
 
 // CMy3dviewerApp
 

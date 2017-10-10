@@ -1,0 +1,6 @@
+vs2010-libjpeg源码
+
+1.将libjpeg源码加入工程
+2.新建jpegtobmp.h，在其中定义图像转换函数
+3.在3dviewerDoc.cpp中 #include "jpegtobmp.h"
+4.修改函数CMy3dViewerDoc::OnOpenDocument(LPCTSTR lpszPathName)中打开jpg的部分，将jpg转换成bmp格式再处理
